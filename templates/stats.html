@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-4">
+  <h2 class="text-center mb-4">📊 Task Statistics</h2>
+
+  <canvas id="statsChart" width="400" height="200"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+  const ctx = document.getElementById('statsChart').getContext('2d');
+  const stats = {{ stats|tojson|safe }};
+
+  const data = {
+    labels: ['Completed This Week', 'Overdue Tasks', 'Pending Tasks', 'Total Tasks'],
+    datasets: [{
+      label: 'Tasks',
+      data: [
+        stats.completed_this_week,
+        stats.overdue_tasks,
+        stats.pending_tasks,
+        stats.total_tasks
+      ],
+      backgroundColor: [
+        'rgba(75, 192, 192, 0.6)',
+        'rgba(255, 99, 132, 0.6)',
+        'rgba(255, 206, 86, 0.6)',
+        'rgba(54, 162, 235, 0.6)'
+      ],
+      borderColor: [
+        'rgba(75, 192, 192, 1)',
+        'rgba(255, 99, 132, 1)',
+        'rgba(255, 206, 86, 1)',
+        'rgba(54, 162, 235, 1)'
+      ],
+      borderWidth: 1
+    }]
+  };
+
+  const config = {
+    type: 'bar',
+    data: data,
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true,
+          precision: 0
+        }
+      }
+    }
+  };
+
+  new Chart(ctx, config);
+</script>
+{% endblock %}

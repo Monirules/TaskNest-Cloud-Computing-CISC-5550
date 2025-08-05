@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container d-flex justify-content-center mt-5 mb-5">
+  <div class="card shadow-lg" style="width: 100%; max-width: 500px;">
+    <div class="card-header text-center" style="background-color: #b4d8fa; color: #004080;">
+
+      <h3 class="mb-0">User Profile</h3>
+    </div>
+    <div class="card-body">
+      
+      <p><strong>User Name:</strong> {{ user.username }}</p>
+      <p><strong>User ID:</strong> {{ user.id }}</p>
+      <p><strong>Tasks Created:</strong> {{ tasks|length }}</p>
+      <hr>
+      <p class="text-muted">
+        This profile displays your account details and task activity.
+      </p>
+    </div>
+    <div class="card-footer text-center">
+      <a href="{{ url_for('dashboard') }}" class="btn btn-outline-primary">Back to Dashboard</a>
+    </div>
+  </div>
+</div>
+{% endblock %}

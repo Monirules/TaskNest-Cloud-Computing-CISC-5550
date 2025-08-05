@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container d-flex justify-content-center align-items-center mt-5 mb-5">
+  <div class="text-center p-5 bg-light rounded shadow" style="max-width: 700px;">
+    <h2 class="mb-4 text-primary">About This App</h2>
+    <p class="lead">
+      This is a simple yet powerful <strong>Flask-based To-Do application</strong>
+      that helps users manage daily tasks with ease. It’s built using:
+    </p>
+    <ul class="list-unstyled mb-4">
+      <li>🗄️ MySQL for reliable data storage</li>
+      <li>🔐 Flask-Login for secure user authentication</li>
+      <li>🎨 Bootstrap 5 for a responsive and clean UI</li>
+    </ul>
+    <p class="fw-semibold">
+      Whether you're tracking personal goals, daily errands, or work projects,
+      this app makes it efficient and enjoyable.
+    </p>
+    <hr class="my-4">
+    <p class="mb-0 text-muted">
+      Made with ❤️ by <strong>Monirul I. Mahmud</strong>
+    </p>
+    <small>Copyright © {{ current_year or "2025" }}</small>
+  </div>
+</div>
+{% endblock %}

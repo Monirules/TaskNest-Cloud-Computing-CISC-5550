@@ -1,0 +1,11 @@
+Flask
+Flask-Login
+Flask-SQLAlchemy
+mysqlclient
+pymysql
+requests
+python-dotenv
+gunicorn
+PyJWT
+
+
