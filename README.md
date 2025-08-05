@@ -2,7 +2,7 @@
 
 A modern, Flask-based to-do application that makes task management simple, secure, and cloud-native.
 
-[Live Demo](https://tasknest-nw6h.onrender.com) • [GitHub Repo](https://github.com/Monirules/TaskNest) • [Docker Hub](https://hub.docker.com/r/mim9/tasknest)
+[Live Demo](https://tasknest-nw6h.onrender.com) • [GitHub Repo](https://github.com/Monirules/TaskNest-Cloud-Computing-CISC-5550) • [Docker Hub](https://hub.docker.com/r/mim9/tasknest)
 
 ---
 
